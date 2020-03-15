@@ -54,6 +54,11 @@ After Windows Server Installation
 - Why / What Addin? 
     >Reference Link [Develop your first SharePoint Add-In](https://www.sharepoint-journey.com/develop-your-first-sharepoint-add-in.html)
 
+- Give Provider Hosted AddIn the SharePoint look-and-feel
+    >Reference Link [Give the remote web application the look and feel of SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/give-your-provider-hosted-add-in-the-sharepoint-look-and-feel#give-the-remote-web-application-the-look-and-feel-of-sharepoint)
+
+    <img src="illustrations/AddIn-page.png" alt="SharePoint look-and-feel of the provider-Hosted AddIn" width="800">
+
 - Create SharePoint Hosted AddIn In SharePoint Server  
     Prerequisites: [Setting up Active Directory in Windows Server 2019](https://www.youtube.com/watch?v=h3sxduUt5a8)
     >Reference Links  
