@@ -29,12 +29,21 @@ After Windows Server Installation
     __Last one__ should be created and started by commands on SharePoint Management Shell  
     >Reference Links [link1](http://sensoft2000-sharepoint.blogspot.com/2014/10/the-subscription-settings-service-and.html), [Create Subscription Settings Service Application For Add-In Development In SharePoint 2016](https://www.c-sharpcorner.com/article/create-subscription-settings-service-application-for-add-in-development-in-share/)  
 
-    ```sh
-    PS C:\Users\Administrator> $account = Get-SPManagedAccount JSGURU\Administrator
-    PS C:\Users\Administrator> $appPool = New-SPServiceApplicationPool -Name SubscriptionServiceAppPool -Account $account
-    PS C:\Users\Administrator> $serviceApp = New-SPSubscriptionSettingsServiceApplication -ApplicationPool $appPool -name "Subscription Settings Service Application" -DatabaseName SubscriptionSettingsDB
-    PS C:\Users\Administrator> $serviceAppProxy = New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $serviceApp
-    ```  
+    - Syntax  
+        ```sh
+        > $account = Get-SPManagedAccount [Domain\User]
+        > $appPool = New-SPServiceApplicationPool -Name [Application Pool Name] -Account $account
+        > $serviceApp = New-SPSubscriptionSettingsServiceApplication -ApplicationPool $appPool -Name [Application Name] -DatabaseName [Database Name]
+        > $serviceAppProxy = New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $serviceApp
+        ```  
+
+    - Example  
+        ```sh
+        PS C:\Users\Administrator> $account = Get-SPManagedAccount JSGURU\Administrator
+        PS C:\Users\Administrator> $appPool = New-SPServiceApplicationPool -Name SubscriptionServiceAppPool -Account $account
+        PS C:\Users\Administrator> $serviceApp = New-SPSubscriptionSettingsServiceApplication -ApplicationPool $appPool -Name "Subscription Settings Service Application" -DatabaseName SubscriptionSettingsDB
+        PS C:\Users\Administrator> $serviceAppProxy = New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $serviceApp
+        ```  
 
 - SharePoint Server AddIn Environment Configuration  
     (SharePoint Hosted and Provider Hosted)  
